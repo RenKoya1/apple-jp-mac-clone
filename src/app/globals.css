@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 220 20% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 9%;
+    --primary: 210 30% 24%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 27%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 56%;
+    --accent: 210 20% 96%;
+    --accent-foreground: 215 25% 27%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 91%;
+    --input: 210 20% 91%;
+    --ring: 210 30% 24%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv09", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-apple-bg text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-medium tracking-tight;
+  }
+}
+
+/* Apple-specific styles */
+@layer components {
+  .apple-nav-link {
+    @apply text-sm opacity-80 hover:opacity-100 transition duration-200;
+  }
+
+  .apple-button {
+    @apply rounded-full px-4 py-1 text-sm font-medium bg-[#0071e3] text-white hover:bg-[#0077ED] transition duration-300;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium text-apple-dark mb-4;
+  }
+
+  .product-title {
+    @apply text-lg md:text-xl font-medium text-apple-dark;
+  }
+
+  .product-price {
+    @apply text-base md:text-lg text-apple-dark;
+  }
+
+  .top-navbar {
+    @apply bg-[rgba(251,251,253,0.8)] backdrop-blur-md border-b border-[rgba(0,0,0,0.16)];
+  }
+}
